@@ -4,19 +4,10 @@ export const appRoutes: Route[] = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'home',
+    redirectTo: 'dashboard',
   },
   {
-    path: 'home',
-    loadChildren: () => import('home').then((m) => m.HomeModule),
-  },
-  {
-    path: 'product',
-    loadChildren: () =>
-      import('product-detail').then((m) => m.productDetailRoutes),
-  },
-  {
-    path: 'auth',
-    loadChildren: () => import('auth-form').then((m) => m.authFormRoutes),
+    path: 'dashboard',
+    loadChildren: () => import('Dashboard').then((m) => m.dashboardRoutes),
   },
 ];
