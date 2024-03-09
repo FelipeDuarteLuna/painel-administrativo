@@ -1,0 +1,23 @@
+.wrapper {
+  display: grid;
+  margin: 30px; /* Adapte o valor conforme necessário */
+
+  &__custom-card {
+    width: 170px; /* Defina a largura desejada */
+    height: 90px; /* Defina a altura desejada */
+    background-color: #6202ee; /* Substitua pela cor desejada */
+    margin-top: 20px;
+    /* Adicione outras propriedades de estilo conforme necessário */
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+  }
+
+  &__h2 {
+    margin-top: 19px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
