@@ -1,3 +1,5 @@
+/* lib-header.component.css */
+
 .header {
   display: flex;
   align-items: center;
@@ -9,8 +11,11 @@
   &__logo {
     color: #fff;
     text-decoration: none;
+    display: flex; /* Adicione esta linha para tornar o contêiner do logo flexível */
+    align-items: center; /* Centraliza os itens verticalmente */
   }
 
   &__title {
+    margin-left: 20px; /* Adapte a margem conforme necessário */
   }
 }

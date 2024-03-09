@@ -7,4 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class HeaderComponent {
   @Input({ required: true }) title = '';
+  @Input() icon: string = ''; // Valor padrão 'menu'
 }

@@ -1,7 +1,5 @@
-<lib-header title="Ecommerce">
-  <lib-product-search></lib-product-search>
+<lib-header title="  Painel Adiministrativo" [icon]="'menu'">
   <div>
-    <a routerLink="/auth">Fazer Login</a>
     <lib-cart [quantity]="cartService.productQuantity$ | async"
       >Carrinho de Compras</lib-cart
     >
