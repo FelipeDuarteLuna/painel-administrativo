@@ -36,6 +36,10 @@ export class DashboardComponent implements AfterViewInit {
       this.numberUser = data.length;
     });
   }
+
+  rosadaDev() {
+    alert('Informa a Rota da sua Page.');
+  }
 }
 
 export interface PeriodicElement {
