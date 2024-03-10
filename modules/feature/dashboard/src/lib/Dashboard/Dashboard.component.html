@@ -2,7 +2,7 @@
   <h1>Big Numbers</h1>
 
   <mat-card class="wrapper__custom-card">
-    <mat-card-content>18 Usuários</mat-card-content>
+    <mat-card-content>{{ numberUser }} Usuários</mat-card-content>
   </mat-card>
 
   <h2 class="wrapper__h2">Usuários</h2>
@@ -10,9 +10,9 @@
   <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource">
       <!-- Position Column -->
-      <ng-container matColumnDef="ID">
+      <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef>ID</th>
-        <td mat-cell *matCellDef="let element">{{ element.ID }}</td>
+        <td mat-cell *matCellDef="let element">{{ element.id }}</td>
       </ng-container>
 
       <!-- Name Column -->
@@ -28,9 +28,9 @@
       </ng-container>
 
       <!-- Symbol Column -->
-      <ng-container matColumnDef="Biography">
+      <ng-container matColumnDef="biography">
         <th mat-header-cell *matHeaderCellDef>Biography</th>
-        <td mat-cell *matCellDef="let element">{{ element.Biography }}</td>
+        <td mat-cell *matCellDef="let element">{{ element.biography }}</td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
