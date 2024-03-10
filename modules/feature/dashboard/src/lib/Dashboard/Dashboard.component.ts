@@ -1,3 +1,4 @@
+import { UserSearchService } from './../../../../../data-access/user/src/lib/services/user-search/user-search.service';
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
@@ -17,8 +18,20 @@ export class DashboardComponent implements AfterViewInit {
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
+  constructor(private userDataAccess: UserSearchService) {}
+
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
+    this.searchUser();
+  }
+
+  searchUser() {
+    const dados = this.userDataAccess.getUsers().subscribe((success) => {
+      // eslint-disable-next-line no-console
+      console.log(success);
+      // eslint-disable-next-line no-console
+      console.log(dados);
+    });
   }
 }
 

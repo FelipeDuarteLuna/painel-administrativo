@@ -3,6 +3,7 @@ import { DashboardComponent } from './Dashboard.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
@@ -15,6 +16,7 @@ describe('DashboardComponent', () => {
         MatTableModule,
         MatPaginatorModule,
         NoopAnimationsModule,
+        HttpClientModule,
       ],
     }).compileComponents();
 
