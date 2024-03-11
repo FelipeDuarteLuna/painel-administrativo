@@ -25,7 +25,8 @@
       "product-search": ["modules/feature/product/search/src/index.ts"],
       "product-ui": ["modules/ui/product/src/index.ts"],
       "user-data-access": ["modules/data-access/user/src/index.ts"],
-      "user-detail": ["modules/feature/user/detail/src/index.ts"]
+      "user-detail": ["modules/feature/user/detail/src/index.ts"],
+      "user-ui": ["modules/ui/user/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
