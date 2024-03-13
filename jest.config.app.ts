@@ -1,9 +1,9 @@
 /* eslint-disable */
 export default {
-  displayName: 'ecommerce',
+  displayName: 'painel-administrativo',
   preset: './jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: './coverage/ecommerce',
+  coverageDirectory: './coverage/painel-administrativo',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',
