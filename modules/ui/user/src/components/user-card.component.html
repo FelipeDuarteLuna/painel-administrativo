@@ -1,23 +1,20 @@
 <section class="user-card">
   <mat-card class="example-card">
     <mat-card-header>
-      <mat-card-title-group>
-        <mat-card-subtitle>Small</mat-card-subtitle>
-        <mat-card-title>Shiba Inu</mat-card-title>
-        <img
-          mat-card-sm-image
-          src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-        />
+      <img class="user-card-img" mat-card-xl-image src="{{ user?.avatar }} " />
+      <mat-card-title-group class="title">
+        <mat-card-subtitle>{{ user?.email }}</mat-card-subtitle>
+        <mat-card-title>{{ user?.name }}</mat-card-title>
       </mat-card-title-group>
     </mat-card-header>
-    <mat-card-content>
-      <p>This card has divider and indeterminate progress as footer</p>
+    <mat-card-content class="user-card-text">
+      <p>{{ user?.biography }}</p>
       <p>{{ 'sdfsdfdsf' }}</p>
-      <mat-divider></mat-divider>
     </mat-card-content>
+    <mat-divider></mat-divider>
     <mat-card-actions>
-      <button mat-button color="primary">LIKE</button>
-      <button mat-button color="primary">SHARE</button>
+      <button mat-button color="primary">ACESSOS</button>
+      <button mat-button color="primary">EDITAR</button>
     </mat-card-actions>
   </mat-card>
 </section>
