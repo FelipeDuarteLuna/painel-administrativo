@@ -14,7 +14,7 @@ import { UserSearchService } from '../../../../../data-access/user/src/lib/servi
 })
 export class DashboardComponent implements AfterViewInit {
   numberUser: number = 0;
-  displayedColumns: string[] = ['id', 'name', 'email', 'biography'];
+  displayedColumns: string[] = ['id', 'avatar', 'name', 'email', 'biography'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;

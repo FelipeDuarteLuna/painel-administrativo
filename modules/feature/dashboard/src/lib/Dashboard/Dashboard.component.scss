@@ -20,6 +20,12 @@
     font-weight: bold;
     text-decoration: underline;
   }
+
+  &__img-circle {
+    border-radius: 50% 50%;
+    margin: 0.5rem 0.5rem;
+    max-width: 100%;
+  }
 }
 
 .mat-mdc-row .mat-mdc-cell {
