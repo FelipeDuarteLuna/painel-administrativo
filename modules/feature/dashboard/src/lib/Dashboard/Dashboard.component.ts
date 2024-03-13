@@ -1,10 +1,10 @@
-import { AfterViewInit, Component, ViewChild, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatTableDataSource, MatTableModule } from '@angular/material/table';
-import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { AfterViewInit, Component, ViewChild, inject } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
+import { NavigationExtras, Router } from '@angular/router';
 import { User, UserSearchService } from 'user-data-access';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'lib-dashboard',
@@ -40,10 +40,13 @@ export class DashboardComponent implements AfterViewInit {
   }
 
   accessDetails(row: User) {
-    this.router.navigate(['/users', row.id]);
+    const navigationExtras: NavigationExtras = {
+      state: {
+        data: row,
+      },
+    };
 
-    // eslint-disable-next-line no-console
-    console.log(row);
+    this.router.navigate(['/users'], navigationExtras);
   }
 }
 

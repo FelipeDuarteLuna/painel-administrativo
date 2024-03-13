@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, OnInit, inject } from '@angular/core';
+import { Router } from '@angular/router';
+import { User } from 'user-data-access';
+
 import { UserCardComponent } from 'user-ui';
 
 @Component({
@@ -9,4 +12,12 @@ import { UserCardComponent } from 'user-ui';
   templateUrl: './user-detail.component.html',
   styleUrl: './user-detail.component.scss',
 })
-export class UserDetailComponent {}
+export class UserDetailComponent implements OnInit {
+  router = inject(Router);
+  userData!: User;
+
+  ngOnInit(): void {
+    const currentState = this.router.lastSuccessfulNavigation;
+    this.userData = currentState?.extras?.state?.['data'] as User;
+  }
+}
