@@ -18,7 +18,7 @@ Design elaborado pela equipe de UX com o objetivo de aprimorar a integração, d
 2. Instalar [Angular CLI](https://www.npmjs.com/package/@angular/cli).
 3. Instalar [Git Bash](https://git-scm.com/downloads)
 4. Clonar o Projeto (git clone https://github.com/FelipeDuarteLuna/painel-administrativo.git).
-5. Acessar o diretório do projeto Clonado. (cd painel-administrativo)
+5. Acessar o diretório do projeto Clonado. (**cd painel-administrativo**)
 6.  Instalar as dependências do projeto a partir do arquivo **package.json**, abrir o projeto no VS CODE e no terminal execute o comando:
 ```
 npm install
