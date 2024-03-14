@@ -1,13 +1,21 @@
-import { getTitle } from '../support/app.po';
+import { getAdminTitle, getTitle } from '../support/app.po';
 
-describe('painel administrativo', () => {
+describe('Painel Adiministrativo', () => {
   beforeEach(() => cy.visit('/'));
 
-  it('should display welcome message', () => {
-    // Custom command example, see `../support/commands.ts` file
-    //cy.login('my-email@something.com', 'myPassword');
+  it('Must display Page Header Title', () => {
 
-    // Function helper example, see `../support/app.po.ts` file
-    getTitle().contains('painel administrativo');
+    getTitle().contains('Admin Panel');
   });
+
+  it('It should display the subtitle of the page header', () => {
+
+    getAdminTitle().should('have.text', 'Admin');
+  });
+
+  it('Totalizando o retorno dos usuários da API', () => {
+      
+    cy.get('.wrapper__custom-card mat-card-content').should('contain', '18');
+  });
+
 });
