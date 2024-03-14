@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
+import { Router } from '@angular/router';
 import { User } from 'user-data-access';
 
 @Component({
@@ -13,5 +14,14 @@ import { User } from 'user-data-access';
   styleUrl: './user-card.component.scss',
 })
 export class UserCardComponent {
+  router = inject(Router);
   @Input() user!: User | null;
+
+  backHome() {
+    this.router.navigate(['./dashboard']);
+  }
+
+  underContruction() {
+    alert('Opss! Under Construction');
+  }
 }
