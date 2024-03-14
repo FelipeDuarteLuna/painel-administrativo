@@ -1,65 +1,71 @@
 <div class="wrapper">
-  <h1>Big Numbers</h1>
+  <section>
+    <h2 class="mat-headline-6">Admin</h2>
 
-  <mat-card class="wrapper__custom-card">
-    <mat-card-content>{{ numberUser }} Usuários</mat-card-content>
-  </mat-card>
+    <mat-card class="wrapper__custom-card" primary>
+      <mat-card-content
+        ><span class="mat-headline-3">{{ numberUser }} </span>
+        <p>Users Total</p></mat-card-content
+      >
+    </mat-card>
+  </section>
+  <section class="wrapper__custom-card-user">
+    <h2>Users</h2>
 
-  <h2 class="wrapper__h2">Usuários</h2>
+    <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource">
+        <!-- Id Columnn -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef>ID</th>
+          <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+        </ng-container>
 
-  <div class="mat-elevation-z8">
-    <table mat-table [dataSource]="dataSource">
-      <!-- Id Columnn -->
-      <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef>ID</th>
-        <td mat-cell *matCellDef="let element">{{ element.id }}</td>
-      </ng-container>
+        <!-- Avatar Column -->
+        <ng-container matColumnDef="avatar">
+          <th mat-header-cell *matHeaderCellDef>Avatar</th>
+          <td mat-cell *matCellDef="let element">
+            <img
+              class="wrapper__img-circle"
+              [src]="element.avatar"
+              alt="{{ element.name }}"
+              width="50"
+              height="50"
+            />
+          </td>
+        </ng-container>
 
-      <!-- Avatar Column -->
-      <ng-container matColumnDef="avatar">
-        <th mat-header-cell *matHeaderCellDef>Avatar</th>
-        <td mat-cell *matCellDef="let element">
-          <img
-            class="wrapper__img-circle"
-            [src]="element.avatar"
-            alt="{{ element.name }}"
-            width="50"
-            height="50"
-          />
-        </td>
-      </ng-container>
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>Name</th>
+          <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+        </ng-container>
 
-      <!-- Name Column -->
-      <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef>Name</th>
-        <td mat-cell *matCellDef="let element">{{ element.name }}</td>
-      </ng-container>
+        <!-- Weight Column -->
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef>E-mail</th>
+          <td mat-cell *matCellDef="let element">{{ element.email }}</td>
+        </ng-container>
 
-      <!-- Weight Column -->
-      <ng-container matColumnDef="email">
-        <th mat-header-cell *matHeaderCellDef>E-mail</th>
-        <td mat-cell *matCellDef="let element">{{ element.email }}</td>
-      </ng-container>
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="biography">
+          <th mat-header-cell *matHeaderCellDef>Biography</th>
+          <td mat-cell *matCellDef="let element">{{ element.biography }}</td>
+        </ng-container>
 
-      <!-- Symbol Column -->
-      <ng-container matColumnDef="biography">
-        <th mat-header-cell *matHeaderCellDef>Biography</th>
-        <td mat-cell *matCellDef="let element">{{ element.biography }}</td>
-      </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr
+          mat-row
+          (click)="accessDetails(row)"
+          *matRowDef="let row; columns: displayedColumns"
+        ></tr>
+      </table>
 
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr
-        mat-row
-        (click)="accessDetails(row)"
-        *matRowDef="let row; columns: displayedColumns"
-      ></tr>
-    </table>
-
-    <mat-paginator
-      [pageSizeOptions]="[5, 10, 20]"
-      showFirstLastButtons
-      aria-label="Select page of periodic elements"
-    >
-    </mat-paginator>
-  </div>
+      <mat-paginator
+        [pageSizeOptions]="[5, 10, 20]"
+        showFirstLastButtons
+        aria-label="Select page of periodic elements"
+      >
+      </mat-paginator>
+    </div>
+  </section>
 </div>
