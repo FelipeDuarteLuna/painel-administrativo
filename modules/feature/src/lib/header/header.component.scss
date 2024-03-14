@@ -1,21 +1,11 @@
-/* lib-header.component.css */
+.header__title {
+  margin-left: 2rem;
+}
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 60px;
-  padding: 20px;
-  background-color: #6f25f1;
+.example-spacer {
+  flex: 1 1 auto;
+}
 
-  &__logo {
-    color: #fff;
-    text-decoration: none;
-    display: flex; /* Adicione esta linha para tornar o contêiner do logo flexível */
-    align-items: center; /* Centraliza os itens verticalmente */
-  }
-
-  &__title {
-    margin-left: 20px; /* Adapte a margem conforme necessário */
-  }
+.demo-section + .demo-section {
+  margin-top: 16px;
 }

@@ -1,10 +1,9 @@
 import { getTitle } from '../support/app.po';
 
-describe('ecommerce', () => {
+describe('painel administrativo', () => {
   beforeEach(() => cy.visit('/'));
 
   it('Should Login', () => {
-
     /*cy.get('a').contains('Fazer Login').click();
     cy.get('input[type="email"]').type('felipinho.luna@gmail.com');
     cy.get('button').contains('Próximo').click();
@@ -18,7 +17,6 @@ describe('ecommerce', () => {
     cy.url().should('include', '/home');
 
     // Function helper example, see `../support/app.po.ts` file
-    getTitle().contains('Ecommerce');
+    getTitle().contains('painel administrativo');
   });
-  
 });

@@ -1,0 +1,16 @@
+.user-card {
+  margin: 2rem 2rem;
+
+  &-img {
+    margin: 0rem 2rem;
+  }
+
+  &-text {
+    margin: 1rem 0rem 0rem 2rem;
+  }
+
+  &-group {
+    display: flex;
+    flex-direction: column;
+  }
+}

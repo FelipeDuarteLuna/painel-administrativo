@@ -1,9 +1,10 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatTableDataSource, MatTableModule } from '@angular/material/table';
-import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { AfterViewInit, Component, ViewChild, inject } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
-import { UserSearchService } from '../../../../../data-access/user/src/lib/services/user-search/user-search.service';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
+import { NavigationExtras, Router } from '@angular/router';
+import { User, UserSearchService } from 'user-data-access';
 
 @Component({
   selector: 'lib-dashboard',
@@ -19,7 +20,8 @@ export class DashboardComponent implements AfterViewInit {
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
-  constructor(private userDataAccess: UserSearchService) {}
+  router = inject(Router);
+  userDataAccess = inject(UserSearchService);
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
@@ -37,8 +39,14 @@ export class DashboardComponent implements AfterViewInit {
     });
   }
 
-  rosadaDev() {
-    alert('Informa a Rota da sua Page.');
+  accessDetails(row: User) {
+    const navigationExtras: NavigationExtras = {
+      state: {
+        data: row,
+      },
+    };
+
+    this.router.navigate(['/users'], navigationExtras);
   }
 }
 

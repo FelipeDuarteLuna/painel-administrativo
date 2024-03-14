@@ -8,15 +8,15 @@
       "executor": "@nx/cypress:cypress",
       "options": {
         "cypressConfig": "e2e/cypress.config.ts",
-        "devServerTarget": "ecommerce:serve:development",
+        "devServerTarget": "painel-administrativo:serve:development",
         "testingType": "e2e"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "ecommerce:serve:production"
+          "devServerTarget": "painel-administrativo:serve:production"
         },
         "ci": {
-          "devServerTarget": "ecommerce:serve-static"
+          "devServerTarget": "painel-administrativo:serve-static"
         }
       }
     },
@@ -29,5 +29,5 @@
     }
   },
   "tags": [],
-  "implicitDependencies": ["ecommerce"]
+  "implicitDependencies": ["painel-administrativo"]
 }

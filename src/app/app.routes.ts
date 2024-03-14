@@ -10,4 +10,8 @@ export const appRoutes: Route[] = [
     path: 'dashboard',
     loadChildren: () => import('Dashboard').then((m) => m.dashboardRoutes),
   },
+  {
+    path: 'users',
+    loadChildren: () => import('user-detail').then((m) => m.userDetailRoutes),
+  },
 ];

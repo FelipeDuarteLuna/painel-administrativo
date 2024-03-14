@@ -1,6 +1,6 @@
 import { getTitle } from '../support/app.po';
 
-describe('ecommerce', () => {
+describe('painel administrativo', () => {
   beforeEach(() => cy.visit('/'));
 
   it('should display welcome message', () => {
@@ -8,7 +8,6 @@ describe('ecommerce', () => {
     //cy.login('my-email@something.com', 'myPassword');
 
     // Function helper example, see `../support/app.po.ts` file
-    getTitle().contains('Ecommerce');
+    getTitle().contains('painel administrativo');
   });
-  
 });

@@ -1,17 +1,20 @@
 .wrapper {
   display: grid;
-  margin: 30px; /* Adapte o valor conforme necessário */
+  margin: 30px;
+  /* Adapte o valor conforme necessário */
 
   &__custom-card {
-    width: 170px; /* Defina a largura desejada */
-    height: 90px; /* Defina a altura desejada */
-    background-color: #6202ee; /* Substitua pela cor desejada */
+    padding: 1rem;
+    background-color: #673ab7;
+    /* Substitua pela cor desejada */
     margin-top: 20px;
-    /* Adicione outras propriedades de estilo conforme necessário */
-    text-align: center;
-    justify-content: center;
-    font-weight: bold;
     color: white;
+    width: 15rem;
+    text-align: end;
+
+    &-user {
+      margin-top: 2rem;
+    }
   }
 
   &__h2 {
@@ -37,4 +40,10 @@
 .mat-mdc-row:hover .mat-mdc-cell {
   border-color: currentColor;
   font-weight: bold;
+}
+
+.count-card-content {
+  display: flex;
+  flex-direction: column;
+  color: white;
 }

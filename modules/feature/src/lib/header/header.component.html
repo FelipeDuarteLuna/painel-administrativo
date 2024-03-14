@@ -1,8 +1,15 @@
 <header class="header">
-  <a routerLink="/" class="header__logo">
-    <mat-icon aria-label="Ícone do Menu" fontIcon="{{ icon }}"></mat-icon>
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="icone de menu">
+      <mat-icon aria-label="Ícone do Menu" fontIcon="{{ icon }}"></mat-icon>
+    </button>
+
     <h1 class="header__title">{{ title }}</h1>
-  </a>
-  <ng-content></ng-content>
-  <ng-content select="[rigth]"></ng-content>
+    <span class="example-spacer"></span>
+    <div class="demo-section">
+      <mat-icon class="header__title-icon" matBadge="0" matBadgeColor="warn"
+        >person</mat-icon
+      >
+    </div>
+  </mat-toolbar>
 </header>

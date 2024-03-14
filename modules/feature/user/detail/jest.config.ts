@@ -1,9 +1,9 @@
 /* eslint-disable */
 export default {
-  displayName: 'painel-administrativo',
-  preset: './jest.preset.js',
+  displayName: 'user-detail',
+  preset: '../../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: './coverage/painel-administrativo',
+  coverageDirectory: '../../../../coverage/modules/feature/user/detail',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',
@@ -18,9 +18,5 @@ export default {
     'jest-preset-angular/build/serializers/no-ng-attributes',
     'jest-preset-angular/build/serializers/ng-snapshot',
     'jest-preset-angular/build/serializers/html-comment',
-  ],
-  testMatch: [
-    '<rootDir>/src/**/__tests__/**/*.[jt]s?(x)',
-    '<rootDir>/src/**/*(*.)@(spec|test).[jt]s?(x)',
   ],
 };
