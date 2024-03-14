@@ -1,20 +1,47 @@
 <section class="user-card">
+  <h2>User Details</h2>
   <mat-card class="example-card">
     <mat-card-header>
       <img class="user-card-img" mat-card-xl-image src="{{ user?.avatar }} " />
-      <mat-card-title-group class="title">
-        <mat-card-subtitle>{{ user?.email }}</mat-card-subtitle>
-        <mat-card-title>{{ user?.name }}</mat-card-title>
-      </mat-card-title-group>
+      <div class="user-card-group">
+        <h3 class="mat-headline-4">
+          {{ user?.name }}
+        </h3>
+
+        <mat-card-title>{{ user?.email }}</mat-card-title>
+        <mat-card-subtitle>Email</mat-card-subtitle>
+
+        <mat-card-title>{{ user?.employeeID || '12336457' }}</mat-card-title>
+        <mat-card-subtitle> ID </mat-card-subtitle>
+
+        <mat-card-title>{{ user?.age || '28' }}</mat-card-title>
+        <mat-card-subtitle>Age</mat-card-subtitle>
+      </div>
     </mat-card-header>
     <mat-card-content class="user-card-text">
+      <mat-divider></mat-divider>
+      <h4 class="mat-headline-6">Resume</h4>
       <p>{{ user?.biography }}</p>
-      <p>{{ 'sdfsdfdsf' }}</p>
+
+      <p><b>Ocupation: </b>{{ user?.ocupation || 'administrator' }}</p>
+
+      <mat-divider></mat-divider>
+
+      <h4 class="mat-headline-6">Address</h4>
+
+      <p>
+        <b>Location:</b>
+        {{ user?.address?.location || 'London , United Kingdom' }}
+      </p>
+      <p><b>Country:</b> {{ user?.address?.country || 'England' }}</p>
     </mat-card-content>
     <mat-divider></mat-divider>
+
     <mat-card-actions>
-      <button mat-button color="primary">ACESSOS</button>
-      <button mat-button color="primary">EDITAR</button>
+      <button mat-button color="primary" (click)="underContruction()">
+        EDITAR
+      </button>
+      <button mat-button color="primary" (click)="backHome()">VOLTAR</button>
     </mat-card-actions>
   </mat-card>
 </section>

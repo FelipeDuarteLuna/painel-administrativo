@@ -8,4 +8,9 @@
   &-text {
     margin: 1rem 0rem 0rem 2rem;
   }
+
+  &-group {
+    display: flex;
+    flex-direction: column;
+  }
 }
