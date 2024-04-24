@@ -57,7 +57,8 @@ npx nx lint modules-layout
 npx nx graph
 ```
 Exemplo das Lib's criadas e as Dependências:
-![image](https://github.com/FelipeDuarteLuna/painel-administrativo/assets/29357935/57fb4546-5fd1-4613-96fe-2cc2155e2936)
+![image](https://github.com/FelipeDuarteLuna/painel-administrativo/assets/29357935/b0f17ada-1198-47d8-b092-cb7543a4db2b)
+
 
 ## Executar tarefas somente do que foi afetado
 
@@ -72,4 +73,36 @@ npx nx affected:test
 npx nx affected:graph
 ```
 
-![image](https://github.com/FelipeDuarteLuna/painel-administrativo/assets/29357935/f1875d3e-89ff-4b30-acd0-b5cc29119638)
+![image](https://github.com/FelipeDuarteLuna/painel-administrativo/assets/29357935/871383f0-d5d3-4b9a-92e0-c7569c3ecc71)
+
+
+## :microscope: Executando Testes Unitário
+Para executar os testes unitários via [Jasmine](https://jasmine.github.io/) :
+
+```
+nx run Dashboard:test
+```
+![image](https://github.com/FelipeDuarteLuna/painel-administrativo/assets/29357935/156b4302-69aa-4df3-8850-1e8ab55bdf5c)
+
+
+## :microscope: Executando Testes e2e
+
+Executando Testes e2e pela ferramenta CYPRESS com INTERFACE:
+
+#### Execução no console
+```
+npx nx e2e e2e --watch
+```
+
+![image](https://github.com/FelipeDuarteLuna/painel-administrativo/assets/29357935/511bce50-bc07-4360-8a88-018c8ad07d26)
+
+
+Executando Testes e2e pela ferramenta CYPRESS localmente sem interface:
+
+```
+nx run e2e:e2e
+```
+
+![image](https://github.com/FelipeDuarteLuna/painel-administrativo/assets/29357935/504f4c70-4110-4e89-aa97-a22b4c44fc0e)
+
+
