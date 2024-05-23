@@ -26,14 +26,16 @@ export class DashboardComponent implements OnInit {
   userDataAccess = inject(UserSearchService);
 
   ngOnInit() {
-    this.dataSource.paginator = this.paginator;
     this.searchUser();
   }
 
   searchUser() {
     this.user$ = this.userDataAccess.getUsers();
-    this.user$.subscribe((usersArray) => {
+    this.user$.subscribe((usersArray: PeriodicElement[]) => {
       this.numberUser = usersArray.length;
+      ELEMENT_DATA = usersArray;
+      this.dataSource.data = ELEMENT_DATA;
+      this.dataSource.paginator = this.paginator;
     });
   }
 
@@ -57,4 +59,4 @@ export interface PeriodicElement {
   avatar?: string;
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [];
+let ELEMENT_DATA: PeriodicElement[] = [];
