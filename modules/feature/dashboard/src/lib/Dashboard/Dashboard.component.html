@@ -13,7 +13,7 @@
     <h2>Users</h2>
 
     <div class="mat-elevation-z8">
-      <table mat-table [dataSource]="dataSource">
+      <table mat-table [dataSource]="user$">
         <!-- Id Columnn -->
         <ng-container matColumnDef="id">
           <th mat-header-cell *matHeaderCellDef>ID</th>
@@ -63,7 +63,8 @@
       <mat-paginator
         [pageSizeOptions]="[5, 10, 20]"
         showFirstLastButtons
-        aria-label="Select page of periodic elements"
+        aria-label="Select page of Users"
+        (page)="(searchUser)"
       >
       </mat-paginator>
     </div>
